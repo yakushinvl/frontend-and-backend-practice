@@ -3,44 +3,42 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Товары</title>
     <link rel="stylesheet" href="../style/styles.css">
-    <title>Семестровая работа</title>
 </head>
 <body>
-<div id="header">Хэдер</div>
-<div id="menu">
-    <ul>
-        <li><a href="../index.html">Главная</a></li>
-        <li><a href="news.html">Новости</a></li>
-        <li><a href="practices.html">Практики</a></li>
-        <li><a href="goods.html">Товары</a></li>
-        <li><a href="contacts.html">Контакты</a></li>
-    </ul>
+<div class="page-container">
+    <div class="header">Хэдер</div>
+    <nav class="nav">
+        <ul class="nav-list">
+            <li class="nav-item"><a class="nav-link" href="../index.html">Главная</a></li>
+            <li class="nav-item"><a class="nav-link" href="news.html">Новости</a></li>
+            <li class="nav-item"><a class="nav-link" href="practices.html">Практики</a></li>
+            <li class="nav-item"><a class="nav-link" href="goods.html">Товары</a></li>
+            <li class="nav-item"><a class="nav-link" href="contacts.html">Контакты</a></li>
+        </ul>
+    </nav>
+    <div class="content">
+        <h1 class="page-title">Наши товары</h1>
+        <div class="goods-container">
+            <div class="goods-card">
+                <img src="../images/goods1.png" alt="Товар 1" class="goods-image">
+                <h2 class="goods-name">Товар 1</h2>
+                <p class="goods-price">Цена: -1₽</p>
+            </div>
+            <div class="goods-card">
+                <img src="../images/goods2.png" alt="Товар 2" class="goods-image">
+                <h2 class="goods-name">Товар 2</h2>
+                <p class="goods-price">Цена: -2₽</p>
+            </div>
+            <div class="goods-card">
+                <img src="../images/goods3.png" alt="Товар 3" class="goods-image">
+                <h2 class="goods-name">Товар 3</h2>
+                <p class="goods-price">Цена: -3₽</p>
+            </div>
+        </div>
+    </div>
+    <div class="footer">Футер</div>
 </div>
-<main>
-    <h1>Каталог товаров</h1>
-
-    <article>
-        <img src="../images/goods1.png" alt="Товар 1" width="200"
-             height="250">
-        <div>Товар 1</div>
-        <p>-1₽</p>
-    </article>
-
-    <article>
-        <img src="../images/goods2.png" alt="Товар 2" width="200"
-             height="250">
-        <div>Товар 2</div>
-        <p>-2₽</p>
-    </article>
-
-    <article>
-        <img src="../images/goods3.png" alt="Товар 3" width="200"
-             height="250">
-        <div>Товар 3</div>
-        <p>-3₽</p>
-    </article>
-</main>
-<div id="footer">Футер</div>
 </body>
 </html>

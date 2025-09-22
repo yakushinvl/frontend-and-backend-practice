@@ -161,6 +161,154 @@ body {
     line-height: 1.6; /* Межстрочный интервал */
     margin: 0; /* Убираем отступы */
 }
+
+/* ==== СТИЛИ ДЛЯ НОВОСТЕЙ ==== */
+.news-container {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.news-card {
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+    border-left: 4px solid #667eea;
+    transition: transform 0.3s ease;
+}
+
+.news-card:hover {
+    transform: translateX(5px);
+}
+
+.news-title {
+    font-size: 22px;
+    color: #2c3e50;
+    margin: 0 0 10px 0;
+    font-weight: 600;
+}
+
+.news-meta {
+    color: #7f8c8d;
+    font-size: 14px;
+    margin-bottom: 15px;
+}
+
+.news-text {
+    color: #555;
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* ==== СТИЛИ ДЛЯ ТОВАРОВ ==== */
+.goods-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.goods-card {
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.goods-card:hover {
+    transform: translateY(-5px);
+}
+
+.goods-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+.goods-name {
+    font-size: 20px;
+    color: #2c3e50;
+    margin: 10px 0;
+    font-weight: 600;
+}
+
+.goods-price {
+    font-size: 18px;
+    color: #667eea;
+    font-weight: 600;
+    margin: 10px 0;
+}
+
+/* ==== СТИЛИ ДЛЯ КОНТАКТОВ ==== */
+.contact-info {
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    padding: 30px;
+    border-radius: 15px;
+    margin: 30px 0;
+    border-left: 5px solid #667eea;
+}
+
+.contact-item {
+    margin: 15px 0;
+    font-size: 18px;
+    color: #2c3e50;
+}
+
+.contact-button {
+    background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    border-radius: 25px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 20px;
+}
+
+.contact-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(79, 172, 254, 0.4);
+}
+
+/* ==== СТИЛИ ДЛЯ ПРАКТИК ==== */
+.practice-container {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.practice-card {
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+    border-left: 4px solid #667eea;
+    transition: transform 0.3s ease;
+}
+
+.practice-card:hover {
+    transform: translateX(5px);
+}
+
+.practice-title {
+    font-size: 22px;
+    color: #2c3e50;
+    margin: 0 0 10px 0;
+    font-weight: 600;
+}
+
+.practice-desc {
+    color: #555;
+    line-height: 1.6;
+    margin: 0;
+}
 /* ===== ФУТЕР ===== */
 .footer {
     background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%); /* Темный
