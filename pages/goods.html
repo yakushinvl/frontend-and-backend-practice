@@ -8,7 +8,10 @@
 </head>
 <body>
 <div class="page-container">
-    <div class="header">Хэдер</div>
+    <header class="header">
+        <h1>Хэдер</h1>
+    </header>
+
     <nav class="nav">
         <ul class="nav-list">
             <li class="nav-item"><a class="nav-link" href="../index.html">Главная</a></li>
@@ -18,27 +21,35 @@
             <li class="nav-item"><a class="nav-link" href="contacts.html">Контакты</a></li>
         </ul>
     </nav>
-    <div class="content">
-        <h1 class="page-title">Наши товары</h1>
-        <div class="goods-container">
-            <div class="goods-card">
-                <img src="../images/goods1.png" alt="Товар 1" class="goods-image">
-                <h2 class="goods-name">Товар 1</h2>
-                <p class="goods-price">Цена: -1₽</p>
+
+    <main class="content">
+        <section class="products-section">
+            <h1 class="page-title">Наши товары</h1>
+            <p class="section-description">Каталог товаров - широкий ассортимент качественных товаров по доступным ценам</p>
+
+            <div class="products-grid">
+                <article class="product-card">
+                    <img src="../images/goods1.png" alt="Товар 1" class="product-image">
+                    <h2 class="product-name">Товар 1</h2>
+                    <p class="product-price">-1₽</p>
+                </article>
+                <article class="product-card">
+                    <img src="../images/goods2.png" alt="Товар 2" class="product-image">
+                    <h2 class="product-name">Товар 2</h2>
+                    <p class="product-price">-2₽</p>
+                </article>
+                <article class="product-card">
+                    <img src="../images/goods3.png" alt="Товар 3" class="product-image">
+                    <h2 class="product-name">Товар 3</h2>
+                    <p class="product-price">-3₽</p>
+                </article>
             </div>
-            <div class="goods-card">
-                <img src="../images/goods2.png" alt="Товар 2" class="goods-image">
-                <h2 class="goods-name">Товар 2</h2>
-                <p class="goods-price">Цена: -2₽</p>
-            </div>
-            <div class="goods-card">
-                <img src="../images/goods3.png" alt="Товар 3" class="goods-image">
-                <h2 class="goods-name">Товар 3</h2>
-                <p class="goods-price">Цена: -3₽</p>
-            </div>
-        </div>
-    </div>
-    <div class="footer">Футер</div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>Футер</p> <!-- Добавили параграф для семантики -->
+    </footer>
 </div>
 </body>
 </html>
