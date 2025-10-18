@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Проекты</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="../style/styles.css">
+    </head>
+    <body>
+        <div class="page">
+            <header class="header"><h1 class="header__title">Проекты</h1></header>
+            <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+                <div class="container">
+                    <a class="navbar-brand d-none d-lg-inline" href="../index.html">Портфолио</a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul class="navbar-nav ms-auto">
+                            <li class="nav-item"><a class="nav-link" href="../index.html">Главная</a></li>
+                            <li class="nav-item"><a class="nav-link active" href="projects.html">Проекты</a></li>
+                            <li class="nav-item"><a class="nav-link" href="diary.html">Дневник</a></li>
+                            <li class="nav-item"><a class="nav-link" href="contacts.html">Контакты</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+            <main class="main">
+                <div class="container my-4">
+                    <h2 class="h4">Мои проекты</h2>
+                    <div class="projects-filters">
+                        <button class="active" data-filter="all">Все</button>
+                        <button data-filter="html">HTML</button>
+                        <button data-filter="js">JS</button>
+                        <button data-filter="react">React</button>
+                    </div>
+                    <div class="projects-grid" id="projectsGrid">
+                        <article class="project-card" data-tags="html">
+                            <h3>Личный сайт</h3>
+                            <p>HTML, CSS</p>
+                        </article>
+                        <article class="project-card" data-tags="js">
+                            <h3>Todo‑приложение</h3>
+                            <p>JavaScript</p>
+                        </article>
+                        <article class="project-card" data-tags="react">
+                            <h3>Интернет‑магазин</h3>
+                            <p>React</p>
+                        </article>
+                        <article class="project-card" data-tags="html">
+                            <h3>Портфолио</h3>
+                            <p>Bootstrap</p>
+                        </article>
+                    </div>
+                </div>
+            </main>
+            <footer class="footer"><p class="footer__text">© 2025 Контакты</p></footer>
+        </div>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+        <script>
+            const filters = document.querySelectorAll('.projects-filters button');
+            const cards = document.querySelectorAll('.project-card');
+            filters.forEach(btn => btn.addEventListener('click', () => {
+                filters.forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+                const tag = btn.dataset.filter;
+                cards.forEach(c => {
+                    const visible = tag === 'all' || c.dataset.tags.includes(tag);
+                    c.style.display = visible ? '' : 'none';
+                });
+            }));
+        </script>
+    </body>
+</html>
+
+<!DOCTYPE html>
+<html lang="ru">
+    <head> 
+        <meta charset="UTF-8"> 
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+        <title>Проекты</title> 
+        <link rel="stylesheet" href="../style/styles.css"> 
+    </head> 
+    <body>
+        <div class="page-container">
+            <header class="header"><h1>Проекты</h1></header>
+            <nav class="nav">
+                <ul class="nav-list">
+                    <li class="nav-item"><a class="nav-link" href="../index.html">Главная</a></li>
+                    <li class="nav-item"><a class="nav-link" aria-current="page" href="projects.html">Проекты</a></li>
+                    <li class="nav-item"><a class="nav-link" href="diary.html">Дневник</a></li>
+                    <li class="nav-item"><a class="nav-link" href="news.html">Новости</a></li>
+                    <li class="nav-item"><a class="nav-link" href="practices.html">Практики</a></li>
+                    <li class="nav-item"><a class="nav-link" href="goods.html">Товары</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contacts.html">Контакты</a></li>
+                </ul>
+            </nav>
+            <main class="content">
+                <h2 class="section-title">Мои проекты</h2>
+                <div class="projects-filters">
+                    <button class="active" data-filter="all">Все</button>
+                    <button data-filter="html">HTML</button>
+                    <button data-filter="js">JS</button>
+                    <button data-filter="react">React</button>
+                </div>
+                <section class="projects-grid" id="projectsGrid">
+                    <article class="project-card" data-tags="html">
+                        <h3>Личный сайт</h3>
+                        <p>HTML, CSS</p>
+                    </article>
+                    <article class="project-card" data-tags="js">
+                        <h3>Todo-приложение</h3>
+                        <p>JavaScript</p>
+                    </article>
+                    <article class="project-card" data-tags="react">
+                        <h3>Интернет-магазин</h3>
+                        <p>React</p>
+                    </article>
+                    <article class="project-card" data-tags="html js">
+                        <h3>Портфолио</h3>
+                        <p>Bootstrap</p>
+                    </article>
+                </section>
+            </main>
+            <footer class="footer"><p>© 2025 Проекты</p></footer>
+        </div>
+        <script>
+            const buttons = document.querySelectorAll('.projects-filters button');
+            const cards = document.querySelectorAll('.project-card');
+            buttons.forEach(btn => btn.addEventListener('click', () => {
+                buttons.forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+                const filter = btn.dataset.filter;
+                cards.forEach(card => {
+                    const show = filter === 'all' || card.dataset.tags.includes(filter);
+                    card.style.display = show ? '' : 'none';
+                });
+            }));
+        </script>
+    </body>
+    </html>
+
+
