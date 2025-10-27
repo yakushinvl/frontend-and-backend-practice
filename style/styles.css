@@ -101,13 +101,6 @@ body {
     opacity: 0.9;
 }
 /* Navigation */
-.nav {
-    background: var(--primary-color);
-    position: sticky;
-    top: 0;
-    z-index: 100;
-    box-shadow: var(--shadow-md);
-}
 .nav__list {
     list-style: none;
     display: flex;
@@ -115,21 +108,42 @@ body {
     gap: var(--space-lg);
     padding: var(--space-md) 0;
 }
-.nav__item {
-    margin: 0;
+nav ul {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+    padding: 0;
+    background: var(--primary-color);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: var(--shadow-md);
 }
-.nav__link {
+.nav-link {
+    text-decoration: none;
+    border: 2px solid transparent;
     display: block;
     padding: var(--space-sm) var(--space-md);
     color: var(--text-white);
-    text-decoration: none;
     border-radius: var(--radius-md);
     transition: var(--transition);
     font-weight: 500;
 }
-.nav__link:hover {
+/* Критически важные стили для доступности */
+.nav-link:focus {
+    outline: none;
+    border-color: #0066cc;
+    background: #e6f3ff;
+}
+.nav-link:hover {
+    background: #ddefff;
     background: rgba(255, 255, 255, 0.1);
     transform: translateY(-1px);
+}
+/* Индикатор текущей страницы */
+.nav-link[aria-current="page"] {
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
 }
 .nav__item--active .nav__link {
     background: rgba(255, 255, 255, 0.2);
@@ -253,7 +267,9 @@ body {
     box-shadow: var(--shadow-lg);
 }
 .project-card__image {
-    height: 200px;
+    width: 100%;
+    height: auto;
+    display: block;
     overflow: hidden;
 }
 .project-card__image img {
@@ -792,4 +808,70 @@ body {
     .button {
         width: 100%;
     }
+}
+/* 1. Базовое адаптивное изображение */
+.responsive-image {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: var(--radius);
+}
+/* 2. Picture element - стили такие же как у базового */
+picture {
+    display: block;
+}
+/* 3. Разные изображения для разных экранов - уже работает через HTML */
+/* 4. Retina изображение */
+.retina-image {
+    width: 100px;
+    height: 100px;
+    display: block;
+    margin: 0 auto;
+}
+/* 5. Object-fit демонстрация */
+.object-fit-demo {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+.object-fit-item {
+    text-align: center;
+}
+.object-fit-item img {
+    width: 100%;
+    height: 200px;
+    border: 2px solid var(--border-color);
+    border-radius: var(--radius);
+    margin-bottom: 0.5rem;
+}
+.object-fit-cover {
+    object-fit: cover;
+}
+.object-fit-contain {
+    object-fit: contain;
+    background: #f1f5f9;
+}
+.object-fit-fill {
+    object-fit: fill;
+}
+/* 6. Адаптивная галерея */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+.gallery__item {
+    overflow: hidden;
+    border-radius: var(--radius);
+}
+.gallery__image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    transition: var(--transition);
+}
+.gallery__image:hover {
+    transform: scale(1.05);
 }

@@ -18,23 +18,33 @@
         </div>
     </header>
     <!-- Navigation -->
-    <nav class="nav">
-        <div class="container">
-            <ul class="nav__list">
-                <li class="nav__item nav__item--active">
-                    <a href="index.html" class="nav__link">Главная</a>
-                </li>
-                <li class="nav__item">
-                    <a href="pages/projects.html" class="nav__link">Проекты</a>
-                </li>
-                <li class="nav__item">
-                    <a href="pages/diary.html" class="nav__link">Дневник</a>
-                </li>
-                <li class="nav__item">
-                    <a href="pages/contacts.html" class="nav__link">Контакты</a>
-                </li>
-            </ul>
-        </div>
+    <!--
+        aria-label описывает назначение навигации для скринридеров
+        Скринридер зачитает: "Основная навигация, список из 3 пунктов"
+    -->
+    <nav aria-label="Основная навигация">
+        <ul class="nav__list">
+            <li>
+                <!--
+                aria-current="page" указывает скринридеру на текущую страницу
+                При фокусе скринридер зачитает: "Главная, текущая страница,
+                ссылка"
+                -->
+<!--                <a href="#home" class="nav-link" aria-current="page">Главная</a>-->
+                <a href="index.html" class="nav-link" aria-current="page">Главная</a>
+
+            </li>
+            <li>
+<!--                <a href="#about" class="nav-link">О нас</a>-->
+                <a href="pages/projects.html" class="nav-link">Проекты</a>
+
+            </li>
+            <li>
+<!--                <a href="#contact" class="nav-link">Контакты</a>-->
+                <a href="pages/contacts.html" class="nav-link">Контакты</a>
+
+            </li>
+        </ul>
     </nav>
     <!-- Main Content -->
     <main class="main">
@@ -43,7 +53,17 @@
             <section class="hero">
                 <div class="hero__content">
                     <div class="hero__image">
-                        <img src="images/photo.png" alt="Фото студента" class="hero__photo">
+                        <picture>
+                            <!-- Большое изображение для десктопов -->
+                            <source media="(min-width: 1200px)"
+                                    srcset="images/photo.png">
+                            <!-- Среднее для планшетов -->
+                            <source media="(min-width: 768px)"
+                                    srcset="images/photo.png">
+                            <!-- Маленькое для мобильных -->
+                            <img src="images/photo.png"
+                                 alt="Фото студента" class="hero__photo">
+                        </picture>
                     </div>
                     <div class="hero__info">
                         <h2 class="hero__greeting">Привет! Я студент</h2>
@@ -106,7 +126,7 @@
                                         <div class="projects-preview__grid">
                                             <article class="project-card">
                                                 <div class="project-card__image">
-                                                    <img src="images/project1.png" alt="Личный сайт">
+                                                    <img src="../../images/project1.png" alt="Личный сайт" class="responsive-image">
                                                 </div>
                                                 <div class="project-card__content">
                                                     <h3 class="project-card__title">Личный сайт</h3>
@@ -122,7 +142,7 @@
                                             </article>
                                             <article class="project-card">
                                                 <div class="project-card__image">
-                                                    <img src="images/project2.png" alt="Todo приложение">
+                                                    <img src="../../images/project2.png" alt="Todo приложение" class="responsive-image">
                                                 </div>
 <div class="project-card__content">
                                                     <h3 class="project-card__title">Todo приложение</h3>
@@ -137,7 +157,7 @@
                                             </article>
                                             <article class="project-card">
                                                 <div class="project-card__image">
-                                                    <img src="images/project3.png" alt="Интернет-магазин">
+                                                    <img src="../../images/project3.png" alt="Интернет-магазин" class="responsive-image">
                                                 </div>
 <div class="project-card__content">
                                                     <h3 class="project-card__title">Интернет-магазин</h3>
