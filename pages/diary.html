@@ -3,72 +3,43 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Товары - Портфолио</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <title>Проекты - StudentDev Portfolio</title>
+    <link rel="stylesheet" href="../style/styles.css">
 </head>
-<body class="bg-light">
-<div class="container-fluid p-0">
+<body>
+<div class="page">
     <!-- Header -->
-    <header class="bg-primary text-white py-4">
+    <header class="header">
         <div class="container">
-            <div class="row align-items-center">
-                <div class="col">
-                    <h1 class="h3 mb-1">Моё Портфолио</h1>
-                    <p class="mb-0 opacity-75">Студент разработчик</p>
-                </div>
-                <div class="col-auto">
-                    <span class="badge bg-light text-primary">ЭФБО-16-24</span>
-                </div>
+            <div class="header__content">
+                <h1 class="header__title">Алексей Петров</h1>
+                <p class="header__subtitle">Студент-разработчик</p>
             </div>
         </div>
     </header>
     <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <nav class="nav">
         <div class="container">
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav">
-                    <li class="nav-item">
-                        <a class="nav-link" href="../index.html">
-                            <i class="bi bi-house me-1"></i>Главная
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="news.html">
-                            <i class="bi bi-newspaper me-1"></i>Новости
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="practices.html">
-                            <i class="bi bi-code-slash me-1"></i>Практики
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="goods.html">
-                            <i class="bi bi-cart me-1"></i>Товары
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link active" href="diary.html">
-                            <i class="bi bi-book me-1"></i>Дневник
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="contacts.html">
-                            <i class="bi bi-telephone me-1"></i>Контакты
-                        </a>
-                    </li>
-                </ul>
-            </div>
+            <ul class="nav__list">
+                <li class="nav__item">
+                    <a href="../index.html" class="nav__link">Главная</a>
+                </li>
+                <li class="nav__item">
+                    <a href="projects.html" class="nav__link">Проекты</a>
+                </li>
+                <li class="nav__item nav__item--active">
+                    <a href="diary.html" class="nav__link">Дневник</a>
+                </li>
+                <li class="nav__item">
+                    <a href="contacts.html" class="nav__link">Контакты</a>
+                </li>
+            </ul>
         </div>
     </nav>
     <!-- Main Content -->
             <main class="main">
                 <div class="container my-4">
-                    <h2 class="h4 mb-3">Мой учебный прогресс</h2>
+                    <h2 class="section-title">Мой учебный прогресс</h2>
                     <div class="card shadow-sm mb-4">
                         <div class="card-body">
                             <ul class="mb-0">
@@ -79,50 +50,49 @@
                             </ul>
                         </div>
                     </div>
-                    <h3 class="h5">Текущие курсы</h3>
-                    <div class="card shadow-sm mb-4">
-                    <div class="card-body">
-                        <div class="mb-3">
-                            <div class="d-flex justify-content-between mb-1">
-                                <span>Веб‑разработка</span>
-                                <span class="text-primary">90%</span>
+                    <h2 class="section-title">Текущие курсы</h2>
+                        <div class="skills__grid">
+                        <div class="skill">
+                            <div class="skill__header">
+                                <span class="skill__name">Веб‑разработка</span>
+                                <span class="skill__percent">90%</span>
                             </div>
-                            <div class="progress" style="height: 8px;">
-                                <div class="progress-bar bg-primary" style="width: 90%"></div>
-                            </div>
-                        </div>
-                        <div class="mb-3">
-                            <div class="d-flex justify-content-between mb-1">
-                                <span>JavaScript</span>
-                                <span class="text-primary">70%</span>
-                            </div>
-                            <div class="progress" style="height: 8px;">
-                                <div class="progress-bar bg-success" style="width: 70%"></div>
+                            <div class="skill__progress">
+                                <div class="skill__progress-bar" style="width: 90%"></div>
+
                             </div>
                         </div>
-                        <div class="mb-3">
-                            <div class="d-flex justify-content-between mb-1">
-                                <span>React</span>
-                                <span class="text-primary">50%</span>
+                        <div class="skill">
+                            <div class="skill__header">
+                                <span class="skill__name">JavaScript</span>
+                                <span class="skill__percent">70%</span>
                             </div>
-                            <div class="progress" style="height: 8px;">
-                                <div class="progress-bar bg-warning" style="width: 50%"></div>
+                            <div class="skill__progress">
+                                <div class="skill__progress-bar" style="width: 70%"></div>
                             </div>
                         </div>
-                    </div>
+                        <div class="skill">
+                            <div class="skill__header">
+                                <span class="skill__name">React</span>
+                                <span class="skill__percent">50%</span>
+                            </div>
+                            <div class="skill__progress">
+                                <div class="skill__progress-bar" style="width: 50%"></div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </main>
     <!-- Footer -->
-    <footer class="bg-dark text-white py-4 mt-5">
+    <footer class="footer">
         <div class="container">
-            <div class="row align-items-center">
-                <div class="col-md-6">
-                    <p class="mb-0">&copy; 2025 Портфолио студента. Все права защищены.</p>
-                </div>
-                <div class="col-md-6 text-md-end">
-                    <a href="contacts.html" class="text-white text-decoration-none me-3">Контакты</a>
-                    <a href="#" class="text-white text-decoration-none">Политика конфиденциальности</a>
+            <div class="footer__content">
+                <p class="footer__copyright">&copy; 2025 StudentDev Portfolio</p>
+                <div class="footer__links">
+                    <a href="mailto:student@edu.ru"
+                       class="footer__link">student@edu.ru</a>
+                    <a href="https://github.com"
+                       class="footer__link">GitHub</a>
                 </div>
             </div>
         </div>
