@@ -1,5 +1,6 @@
 # Фронтенд и бэкенд разработка
 
+### Практическое занятие 9-10 - [тык](https://yakushinvl.github.io/frontend-and-backend-practice/versions/v0/index.html)
 ### Контрольная работа №1 - [тык](https://yakushinvl.github.io/frontend-and-backend-practice/versions/v1/index.html)
 ### Контрольная работа №2 - [тык](https://yakushinvl.github.io/frontend-and-backend-practice/versions/v2/index.html)
 
